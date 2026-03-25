@@ -1,0 +1,8 @@
+{
+ "scenarios":[
+	"kill_container",
+	"kill_process",
+	"cpu_stress"
+ ],
+ "interval_seconds":10
+}
