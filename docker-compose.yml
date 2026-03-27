@@ -1,6 +1,7 @@
 services:
   app:
     build: ./app
+    init: true
     ports:
       - "3000:3000"
     restart: always

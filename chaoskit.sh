@@ -3,10 +3,10 @@ COMMAND=$1
 
 case $COMMAND in
     start)
-        docker-compose up -d --build
+        docker compose up -d --build --wait
         ;;
     stop)
-        docker-compose down
+        docker compose down
         ;;
     chaos)
         bash chaos/chaos.sh
@@ -21,6 +21,6 @@ case $COMMAND in
         bash reports/reports.sh
         ;;
     *)
-        echo "Usage: ./chaokit.sh [start|stop|chaos|monitor|alert|report]"
+        echo "Usage: ./chaoskit.sh [start|stop|chaos|monitor|alert|report]"
         ;;
 esac
