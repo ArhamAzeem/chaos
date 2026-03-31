@@ -1,5 +1,6 @@
 #!/bin/bash
-LOG_FILE='../logs/monitor.log'
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+LOG_FILE="$ROOT/logs/monitor.log"
 
 TOTAL_DOWN=$(grep -c "DOWN" "$LOG_FILE")
 TOTAL_UP=$(grep -c "UP" "$LOG_FILE")

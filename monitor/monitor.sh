@@ -1,7 +1,8 @@
 #!/bin/bash
-mkdir -p ../logs
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+mkdir -p "$ROOT/logs"
 
-LOG_FILE="../logs/monitor.log"
+LOG_FILE="$ROOT/logs/monitor.log"
 
 touch "$LOG_FILE"
 
@@ -17,5 +18,5 @@ while true; do
         echo "[$TIME] DOWN (Status: $STATUS)" | tee -a "$LOG_FILE"
     fi
 
-    sleep 5
+    sleep 2
 done
